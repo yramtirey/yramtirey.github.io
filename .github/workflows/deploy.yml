@@ -1,12 +1,15 @@
-name: Deploy portfolio
+name: Deploy portfolio to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: pages
@@ -17,13 +20,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out website code
+      - name: Checkout repository
         uses: actions/checkout@v6
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "22"
+          node-version: "24"
           cache: npm
 
       - name: Configure GitHub Pages
@@ -32,10 +35,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Next.js website
+      - name: Build portfolio
         run: npm run build
 
-      - name: Check website and PDFs
+      - name: Verify exported website and documents
         run: |
           test -f out/index.html
           test -f out/resume.pdf
@@ -50,15 +53,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
 
-    permissions:
-      pages: write
-      id-token: write
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Publish website
+      - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
