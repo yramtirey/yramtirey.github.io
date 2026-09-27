@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Yeritmary Rodriguez Delgado | Robotics & Machine Learning",
 
   description:
-    "Portfolio of Yeritmary Rodriguez Delgado, robotics engineer working in automated science, machine learning, computer vision, and experimental imaging.",
+    "I build systems for science that need to work outside of a notebook, connecting automated experimentation, robotics, machine learning, and computational imaging.",
 
   alternates: {
     canonical: "https://yramtirey.github.io/",

@@ -82,14 +82,13 @@ export default function Home() {
             </h1>
 
             <p className="mt-10 max-w-[58rem] text-xl leading-9 text-[#4B202B] md:text-2xl">
-              I design and build systems at the intersection of automation,
-              robotics, machine learning, and experimental imaging science.
+              I build systems for science that need to work outside of a notebook.
             </p>
 
             <p className="mt-5 max-w-[48rem] text-base leading-8 text-[#5B5052] md:text-lg">
-              My work spans robotic systems, laboratory automation, computer
-              vision, scientific machine learning, and AI-driven tools for
-              research.
+              I work across automated experimentation, robotics, machine learning,
+              and computational imaging, connecting biological questions with
+              usable technical systems.
             </p>
 
             {/* hero buttons */}
@@ -140,7 +139,7 @@ export default function Home() {
 
             <div className="mt-12 flex items-center gap-3 font-serif text-sm italic text-[#722F45]/75">
               <span>✦</span>
-              <span>automation, intelligence, and visual science</span>
+              <span>from scientific questions to working systems</span>
               <span>✦</span>
             </div>
           </div>
@@ -157,29 +156,29 @@ export default function Home() {
               <SectionLabel>About Me</SectionLabel>
 
               <h2 className="mt-4 max-w-md font-serif text-4xl leading-tight text-[#2B2023] md:text-5xl">
-                I build systems where software meets the{" "}
+                Tools to help us see, automate, and{" "}
                 <span className="italic text-[#4B202B]">
-                  physical world.
+                  understand science.
                 </span>
               </h2>
             </div>
 
             <div className="max-w-2xl">
               <p className="text-lg leading-9 text-[#4B202B]">
-                I&apos;m a robotics engineer working across laboratory
-                automation, machine learning, computer vision, and experimental
-                imaging. I&apos;m most interested in systems where software has
-                to interact with the physical world — robots, instruments,
-                imaging pipelines, and scientific workflows.
+                I&apos;m a robotics engineer with a background in biology and
+                computational training. I build tools that connect experiments,
+                images, and data to the questions scientists are trying to
+                answer. I&apos;m especially interested in what it takes for those
+                tools to become part of everyday scientific and clinical workflows.
               </p>
 
               <p className="mt-6 text-base leading-8 text-[#5B5052]">
-                My biological background and computational training let me
-                follow a project from the scientific question through technical
-                implementation. That perspective helps me evaluate whether an
-                engineering solution actually makes sense for the biology,
-                recognize when the implementation is drifting from the
-                experimental goal, and pivot when needed.
+                The technical challenge is only part of the work. When I automate
+                a protocol or analyze biological images, I ask whether the system
+                still serves the experimental goal and makes sense for the biology.
+                I also care about the person who has to use it: what they need to
+                understand, where things can go wrong, and how the tool fits into
+                their work.
               </p>
 
               <div className="mt-9 border-l-2 border-[#E9C2CB] pl-5">
@@ -188,7 +187,7 @@ export default function Home() {
                 </p>
 
                 <p className="mt-3 font-serif text-xl italic leading-8 text-[#4B202B]">
-                  Autonomous labs · Scientific AI · Computer vision · Robotics
+                  Autonomous labs · Scientific robotics · Computational imaging
                 </p>
               </div>
             </div>
@@ -206,13 +205,13 @@ export default function Home() {
               <SectionLabel>Selected Work</SectionLabel>
 
               <h2 className="mt-3 font-serif text-4xl text-[#2B2023] md:text-5xl">
-                Projects I&apos;ve been building.
+                What I&apos;ve been building.
               </h2>
             </div>
 
             <p className="max-w-md text-sm leading-7 text-[#5B5052]">
-              Robotics, autonomous experimentation, machine learning,
-              computer vision, and scientific software.
+              Tools for choosing the next experiment, interpreting biological
+              images, and learning from molecular data.
             </p>
           </div>
 
@@ -221,7 +220,7 @@ export default function Home() {
             <ProjectCard
               number="01"
               title="Automated Colorimetric Assay Optimization"
-              description="A closed-loop experimental system that combines OT-2 liquid handling, camera-based feedback, and active learning to iteratively optimize dye formulations toward target colors."
+              description="Reaching a target color requires deciding which dye formulation to try next. Our closed-loop system connects OT-2 liquid handling, camera feedback, and active learning to use each experiment to guide the next formulation."
               tags={[
                 "Robotics",
                 "Active Learning",
@@ -235,7 +234,7 @@ export default function Home() {
             <ProjectCard
               number="02"
               title="Uncertainty-Guided Nuclei Segmentation"
-              description="Active learning for scientific image segmentation using a U-Net and Monte Carlo dropout to prioritize informative microscopy images under limited labeling budgets."
+              description="With a limited labeling budget, which microscopy images are most useful to annotate? I built a nuclei segmentation workflow that uses a U-Net and Monte Carlo dropout to estimate uncertainty and prioritize informative images for active learning."
               tags={[
                 "Computer Vision",
                 "Active Learning",
@@ -250,7 +249,7 @@ export default function Home() {
             <ProjectCard
               number="03"
               title="Predicting Ixazomib Response in Cancer Cell Lines"
-              description="Integrated gene-expression and multimodal molecular data to model Ixazomib response using custom SVM/SVR implementations, Elastic Net regression, biological feature engineering, and PCA."
+              description="Can molecular data help predict how cancer cell lines respond to Ixazomib? Our project modeled drug response from gene expression and other molecular data, using custom SVM/SVR implementations, Elastic Net regression, biological feature engineering, and PCA."
               tags={[
                 "Biomedical ML",
                 "Regression",
@@ -265,7 +264,7 @@ export default function Home() {
             <ProjectCard
               number="04"
               title="LabOS"
-              description="A generative-AI framework for multi-robot laboratory scheduling and dynamic replanning across automated scientific workflows."
+              description="Automated experiments need robots to coordinate their work and adapt when plans change. I’m developing LabOS, a generative-AI framework for multi-robot laboratory scheduling and dynamic replanning."
               tags={[
                 "Generative AI",
                 "Robotics",
@@ -296,7 +295,7 @@ export default function Home() {
               role="Robotics Engineer"
               company="Magnify Biosciences"
               date="2026 — Present"
-              description="Developing and debugging robotic laboratory workflows, liquid-handling protocols, and automation infrastructure for scientific experiments. My work includes protocol execution, labware integration, robotic workflow design, motion and positioning troubleshooting, and software tools for improving automation reliability."
+              description="I develop and debug robotic laboratory workflows and liquid-handling protocols on Opentrons Flex and OT-2 systems. I integrate labware, troubleshoot motion and positioning, and build Python tools to make experimental automation more reliable."
               tags={[
                 "Robotics",
                 "Laboratory Automation",
@@ -311,7 +310,7 @@ export default function Home() {
               role="Post-baccalaureate Research Fellow"
               company="Carnegie Mellon University"
               date="2024 — 2025"
-              description="Worked on experimental imaging and quantitative analysis of connexin proteins, combining microscopy, image analysis, and computational workflows to study gap-junction plaque behavior."
+              description="I studied gap-junction plaque behavior by imaging and quantifying connexin proteins. I combined microscopy, image analysis, and computational workflows to turn observations into measurements for biological analysis."
               tags={[
                 "Experimental Imaging",
                 "Microscopy",
@@ -333,13 +332,13 @@ export default function Home() {
           <h2 className="mx-auto mt-4 max-w-3xl font-serif text-4xl leading-tight text-[#2B2023] md:text-6xl">
             Let&apos;s build something{" "}
             <span className="italic text-[#4B202B]">
-              interesting.
+              useful.
             </span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-[#5B5052]">
-            I&apos;m always interested in robotics, automation, machine
-            learning, scientific software, and ambitious technical projects.
+            Working on a scientific problem that needs better tools? I&apos;d
+            like to hear about it.
           </p>
 
           <div className="mt-9 flex flex-wrap justify-center gap-4">
@@ -395,7 +394,7 @@ export default function Home() {
           <p>YRD ✦</p>
 
           <p className="font-serif italic">
-            automation, intelligence, and visual science
+            from scientific questions to working systems
           </p>
 
           <p>© 2026 Yeritmary Rodriguez Delgado</p>
