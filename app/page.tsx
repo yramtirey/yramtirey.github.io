@@ -12,6 +12,8 @@ const nucleiRepo =
 const ixazomibRepo =
   "https://github.com/yramtirey/predicting-ixazomib-response-in-cancer-cell-lines";
 
+const gadgetInspectraRepo = "https://github.com/yramtirey/GadgetInspectra";
+
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#F7F1E8] text-[#2B2023]">
@@ -211,7 +213,7 @@ export default function Home() {
 
             <p className="max-w-md text-sm leading-7 text-[#5B5052]">
               Tools for choosing the next experiment, interpreting biological
-              images, and learning from molecular data.
+              images, learning from molecular data, and reviewing simulated inspections.
             </p>
           </div>
 
@@ -263,6 +265,15 @@ export default function Home() {
 
             <ProjectCard
               number="04"
+              title="GadgetInspectra"
+              description="How should an inspection workflow handle a thin spot? I built a simulated ROS 2 thickness-inspection workflow with scenario-based readings, operator approval or rejection before simulated rework, fresh verification scans, failure handling, and an audit log. A React/Three.js dashboard shows the workflow and review controls."
+              tags={["ROS 2", "Python", "React", "Three.js", "Operator Review"]}
+              href={gadgetInspectraRepo}
+              note="Simulated sensor, robot motion & rework"
+            />
+
+            <ProjectCard
+              number="05"
               title="LabOS"
               description="Automated experiments need robots to coordinate their work and adapt when plans change. I’m developing LabOS, a generative-AI framework for multi-robot laboratory scheduling and dynamic replanning."
               tags={[
