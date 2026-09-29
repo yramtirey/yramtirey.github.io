@@ -276,6 +276,21 @@ export default function Home() {
           </div>
         </section>
 
+        {/* personal projects */}
+        <section id="personal-projects" className="relative z-10 border-t border-[#4B202B]/10 py-24">
+          <SectionLabel>Personal Projects</SectionLabel>
+          <h2 className="mt-3 mb-10 font-serif text-4xl text-[#2B2023] md:text-5xl">Scientific software, from geometry to evidence.</h2>
+          <ProjectCard
+            number="01"
+            title="NeuroVasc Workbench"
+            description="Interactive cerebrovascular imaging and quantitative geometry for Circle-of-Willis analysis. Connects labeled MRA segmentations with anatomy-aware 3D visualization, caliber profiles and spatially linked measurements, supported by synthetic validation."
+            tags={["Computational Imaging", "Medical Imaging", "Python", "FastAPI", "React", "TypeScript", "VTK.js", "Scientific Validation"]}
+            href="/projects/neurovasc-workbench/"
+            linkLabel="Explore the project →"
+            note="Research / engineering prototype · Not diagnostic software"
+          />
+        </section>
+
         {/* experience */}
         <section
           id="experience"
@@ -428,6 +443,7 @@ function ProjectCard({
   tags,
   href,
   note,
+  linkLabel,
 }: {
   number: string;
   title: string;
@@ -435,6 +451,7 @@ function ProjectCard({
   tags: string[];
   href?: string;
   note?: string;
+  linkLabel?: string;
 }) {
   const cardClass =
     "group block rounded-[2rem] border border-[#4B202B]/10 bg-white/30 p-7 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#722F45]/30 hover:shadow-[0_20px_60px_rgba(75,32,43,0.08)] md:p-9";
@@ -477,7 +494,7 @@ function ProjectCard({
       </div>
 
       <div className="mt-9 text-sm font-medium text-[#4B202B]">
-        {href ? "View on GitHub →" : "Currently building ✦"}
+        {href ? (linkLabel ?? "View on GitHub →") : "Currently building ✦"}
       </div>
     </>
   );
@@ -486,7 +503,7 @@ function ProjectCard({
     return (
       <a
         href={href}
-        target="_blank"
+        target={href.startsWith("/") ? undefined : "_blank"}
         rel="noopener noreferrer"
         className={cardClass}
       >
