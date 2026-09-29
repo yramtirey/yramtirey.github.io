@@ -7,8 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://yramtirey.github.io/projects/neurovasc-workbench/" },
 };
 
-// Set only after the public source repository has been created and verified.
-const repositoryUrl: string | null = null;
+const repositoryUrl = "https://github.com/yramtirey/NeuroVasc-Workbench";
 const sections = [
   ["The problem", "A labeled vascular segmentation is only the starting point. Turning it into interpretable measurements requires physical coordinates, centerlines, vessel identity and a network representation that makes failures visible."],
   ["What it does", "NeuroVasc combines anatomical vessel selection, an interactive Circle-of-Willis view, caliber profiles and chart-to-3D point linking. The Python tools also support centerline, branch and network-topology experiments, with advanced methods kept separate from production defaults."],

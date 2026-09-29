@@ -12,6 +12,8 @@ const nucleiRepo =
 const ixazomibRepo =
   "https://github.com/yramtirey/predicting-ixazomib-response-in-cancer-cell-lines";
 
+const gadgetInspectraRepo = "https://github.com/yramtirey/GadgetInspectra";
+
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#F7F1E8] text-[#2B2023]">
@@ -23,7 +25,7 @@ export default function Home() {
       <div className="px-6 md:px-12 lg:px-20">
 
         {/* navigation */}
-        <nav className="relative z-20 flex items-center justify-between py-6 md:py-8">
+        <nav className="relative z-20 flex flex-wrap items-center justify-between gap-5 py-6 md:py-8">
           <a
             href="#top"
             className="text-2xl font-bold tracking-tight text-[#4B202B]"
@@ -31,7 +33,7 @@ export default function Home() {
             YRD ✦
           </a>
 
-          <div className="hidden items-center gap-8 text-sm md:flex">
+          <div className="flex w-full flex-wrap items-center gap-x-6 gap-y-3 text-sm md:w-auto md:gap-x-8">
             <a
               href="#about"
               className="transition-colors hover:text-[#722F45]"
@@ -44,6 +46,13 @@ export default function Home() {
               className="transition-colors hover:text-[#722F45]"
             >
               Projects
+            </a>
+
+            <a
+              href="#personal-projects"
+              className="transition-colors hover:text-[#722F45]"
+            >
+              Personal Projects
             </a>
 
             <a
@@ -277,11 +286,32 @@ export default function Home() {
         </section>
 
         {/* personal projects */}
-        <section id="personal-projects" className="relative z-10 border-t border-[#4B202B]/10 py-24">
-          <SectionLabel>Personal Projects</SectionLabel>
-          <h2 className="mt-3 mb-10 font-serif text-4xl text-[#2B2023] md:text-5xl">Scientific software, from geometry to evidence.</h2>
+        <section
+          id="personal-projects"
+          aria-labelledby="personal-projects-heading"
+          className="relative z-10 border-t border-[#4B202B]/10 py-24"
+        >
+          <div className="mb-14">
+            <SectionLabel>Independent Prototypes</SectionLabel>
+            <h2
+              id="personal-projects-heading"
+              className="mt-3 font-serif text-4xl text-[#2B2023] md:text-5xl"
+            >
+              Personal Projects
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <ProjectCard
+              number="01"
+              title="GadgetInspectra"
+              description="I built a simulated ROS 2 inspection workflow with scenario-based thickness readings, operator approval or rejection before simulated rework, fresh verification scans, failure handling, and an audit log. A React/Three.js dashboard shows the workflow and review controls. Sensor readings, robot motion, and rework are simulated; the prototype uses no physical robot or real ultrasonic measurements."
+              tags={["ROS 2", "Python", "React", "Three.js", "Operator Review"]}
+              href={gadgetInspectraRepo}
+              note="Independent, simulated prototype"
+            />
           <ProjectCard
-            number="01"
+            number="02"
             title="NeuroVasc Workbench"
             description="Interactive cerebrovascular imaging and quantitative geometry for Circle-of-Willis analysis. Connects labeled MRA segmentations with anatomy-aware 3D visualization, caliber profiles and spatially linked measurements, supported by synthetic validation."
             tags={["Computational Imaging", "Medical Imaging", "Python", "FastAPI", "React", "TypeScript", "VTK.js", "Scientific Validation"]}
@@ -289,6 +319,7 @@ export default function Home() {
             linkLabel="Explore the project →"
             note="Research / engineering prototype · Not diagnostic software"
           />
+          </div>
         </section>
 
         {/* experience */}
