@@ -12,8 +12,6 @@ const nucleiRepo =
 const ixazomibRepo =
   "https://github.com/yramtirey/predicting-ixazomib-response-in-cancer-cell-lines";
 
-const gadgetInspectraRepo = "https://github.com/yramtirey/GadgetInspectra";
-
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#F7F1E8] text-[#2B2023]">
@@ -305,9 +303,10 @@ export default function Home() {
             <ProjectCard
               number="01"
               title="GadgetInspectra"
-              description="I built a simulated ROS 2 inspection workflow with scenario-based thickness readings, operator approval or rejection before simulated rework, fresh verification scans, failure handling, and an audit log. A React/Three.js dashboard shows the workflow and review controls. Sensor readings, robot motion, and rework are simulated; the prototype uses no physical robot or real ultrasonic measurements."
+              description="A thin reading should lead to a clear decision. I built a simulated robotic inspection workflow with thickness checks, operator review, rework, and fresh verification scans. Explore the scenarios in a browser demo or connect the dashboard to ROS 2."
               tags={["ROS 2", "Python", "React", "Three.js", "Operator Review"]}
-              href={gadgetInspectraRepo}
+              href="/projects/gadgetinspectra/"
+              linkLabel="Explore the project →"
               note="Independent, simulated prototype"
             />
           <ProjectCard
