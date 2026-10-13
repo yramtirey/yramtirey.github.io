@@ -60,12 +60,6 @@ export default function Home() {
               Experience
             </a>
 
-            <a
-              href="#contact"
-              className="transition-colors hover:text-[#722F45]"
-            >
-              Contact
-            </a>
           </div>
         </nav>
 
@@ -108,7 +102,7 @@ export default function Home() {
               </a>
 
               <a
-                href="/resume.pdf"
+                href="/resumee.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full border border-[#4B202B] px-7 py-3.5 text-sm font-medium text-[#4B202B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#E9C2CB]/40"
@@ -363,73 +357,6 @@ export default function Home() {
                 "Quantitative Biology",
               ]}
             />
-
-          </div>
-        </section>
-
-        {/* contact */}
-        <section
-          id="contact"
-          className="relative z-10 border-t border-[#4B202B]/10 py-28 text-center"
-        >
-          <SectionLabel>Contact</SectionLabel>
-
-          <h2 className="mx-auto mt-4 max-w-3xl font-serif text-4xl leading-tight text-[#2B2023] md:text-6xl">
-            Let&apos;s build something{" "}
-            <span className="italic text-[#4B202B]">
-              useful.
-            </span>
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-[#5B5052]">
-            Working on a scientific problem that needs better tools? I&apos;d
-            like to hear about it.
-          </p>
-
-          <div className="mt-9 flex flex-wrap justify-center gap-4">
-
-            <a
-              href="mailto:yeritmar@andrew.cmu.edu"
-              className="rounded-full bg-[#4B202B] px-7 py-3.5 text-sm font-medium text-[#F7F1E8] transition duration-300 hover:-translate-y-0.5 hover:bg-[#722F45]"
-            >
-              Email me
-            </a>
-
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-[#4B202B] px-7 py-3.5 text-sm font-medium text-[#4B202B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#E9C2CB]/40"
-            >
-              Resume ↗
-            </a>
-
-            <a
-              href="/cv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-[#4B202B] px-7 py-3.5 text-sm font-medium text-[#4B202B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#E9C2CB]/40"
-            >
-              Full CV ↗
-            </a>
-
-            <a
-              href={githubProfile}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-[#4B202B] px-7 py-3.5 text-sm font-medium text-[#4B202B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#E9C2CB]/40"
-            >
-              GitHub ↗
-            </a>
-
-            <a
-              href={linkedinProfile}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-[#4B202B] px-7 py-3.5 text-sm font-medium text-[#4B202B] transition duration-300 hover:-translate-y-0.5 hover:bg-[#E9C2CB]/40"
-            >
-              LinkedIn ↗
-            </a>
 
           </div>
         </section>

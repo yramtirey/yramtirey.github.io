@@ -41,7 +41,7 @@ jobs:
       - name: Verify exported website and documents
         run: |
           test -f out/index.html
-          test -f out/resume.pdf
+          test -f out/resumee.pdf
           test -f out/cv.pdf
 
       - name: Upload built website
